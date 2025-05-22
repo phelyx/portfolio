@@ -2248,3 +2248,23 @@ body {
   /* Optional: subtle color change on hover */
 }
 
+/* Make entire section take full height and center content */
+.center-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+/* Stack buttons vertically and center */
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -179,3 +179,16 @@ toggle.addEventListener('click', () => {
 });
 
 
+//** added this */
+  function openLightbox(imgSrc) {
+    const modal = document.getElementById("lightbox-modal");
+    const modalImg = document.getElementById("lightbox-img");
+
+    modal.style.display = "flex";
+    modalImg.src = imgSrc;
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox-modal").style.display = "none";
+  }
+

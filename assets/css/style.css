@@ -2205,3 +2205,46 @@ body {
   color: var(--text-color);
 }
 
+/** added this **/
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  display: block;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.project-title a {
+  color: white;
+  text-decoration: none;
+}
+
+.project-title a:hover {
+  text-decoration: underline;
+  /* Optional: show underline on hover */
+  color: #ddd;
+  /* Optional: subtle color change on hover */
+}
+

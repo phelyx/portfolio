@@ -193,3 +193,30 @@ toggle.addEventListener('click', () => {
     document.getElementById("lightbox-modal").style.display = "none";
   }
 
+
+  window.addEventListener('DOMContentLoaded', function () {
+    const audio = document.getElementById('background-music');
+    audio.muted = true; // Allow autoplay
+    const playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          console.log("✅ Background music started muted.");
+        })
+        .catch(error => {
+          console.warn("🔇 Autoplay prevented by browser. Will require user interaction.");
+        });
+    }
+  });
+
+  // Optional unmute toggle
+  function toggleMusic() {
+    const audio = document.getElementById('background-music');
+    if (audio.muted) {
+      audio.muted = false;
+    } else {
+      audio.muted = true;
+    }
+  }
+
